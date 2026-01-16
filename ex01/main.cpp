@@ -9,9 +9,10 @@ int main ()
 {
 	    int intArray[] = {1, 2, 3, 4, 5};
         size_t length = sizeof(intArray) / sizeof(intArray[0]);
-        
-        iter(intArray, length, incrementPrint);
 
+        iter(intArray, length, incrementPrint);
+        iter(intArray, length, increment<int>);
+        iter(intArray, length, printElement<int>);
         std::cout << std::endl;
 }
 
