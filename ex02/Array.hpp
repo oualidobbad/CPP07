@@ -1,5 +1,6 @@
 #pragma once
-#include <stdexcept>
+#include <exception>
+
 template <typename T> 
 class Array
 {
@@ -18,4 +19,4 @@ class Array
 		size_t size() const;
 };
 
-
+#include "Array.tpp"
