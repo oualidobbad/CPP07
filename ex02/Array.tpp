@@ -18,6 +18,7 @@ Array<T>::Array(const Array& other)
 	if (other._size > 0)
 	{
 		this->arr = new T[other._size];
+		this->_size = other._size;
 		for (size_t i = 0; i < other._size; i++)
 			arr[i] = other.arr[i];
 	}
@@ -31,8 +32,13 @@ Array<T>::Array(const Array& other)
 template <typename T>
 Array<T>& Array<T>::operator=(const Array& other)
 {
+	if (this == &other)
+		return *this;
 	if (other._size > 0)
 	{
+		if (!arr)
+			arr = new T[other._size]();
+		_size = other._size;
 		for(size_t i = 0; i < other._size; i++)
 			arr[i] = other.arr[i];
 	}
@@ -41,7 +47,6 @@ Array<T>& Array<T>::operator=(const Array& other)
 		arr = NULL;
 		_size = 0;
 	}
-
 	return *this;
 }
 
@@ -55,7 +60,7 @@ template <typename T>
 T& Array<T>::operator[](unsigned int index)
 {
 	if (index >= _size)
-		throw std::exception();
+		throw std::out_of_range("out of bounds!");
 	return arr[index];
 }
 
