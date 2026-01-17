@@ -1,6 +1,3 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include "Array.hpp"
 
 #define MAX_VAL 750
@@ -17,8 +14,7 @@ int main(int, char**)
     }
     //SCOPE
     {
-        Array<int> tmp;
-		tmp = numbers;
+        Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
 

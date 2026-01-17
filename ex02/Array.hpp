@@ -1,5 +1,8 @@
 #pragma once
 #include <exception>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 template <typename T> 
 class Array
