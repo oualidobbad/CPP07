@@ -1,22 +1,13 @@
-# CPP07
+    # CPP07
 
-## Description
-C++ module on templates and generic helpers.
+    C++ Module 07: templates and generic utilities.
 
-## Features
-- Template functions and simple container-like classes.
+    ## Topics
+    - Function/class templates, template parameters.
+    - Helper functions like `iter` and `swap` implementations.
 
-## Technologies Used
-- C++98, Makefile.
+    ## Build & Run
+    - `make`; run examples to see template behavior with different types.
 
-## Installation
-- Run `make` in the module directory.
-
-## Usage
-- Execute the examples to test template utilities.
-
-## Example
-- Apply `iter` to print elements of an array.
-
-## Author
-- Oualid Obbad (@oualidobbad)
+    ## Author
+    Oualid Obbad (@oualidobbad)
